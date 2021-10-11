@@ -4,6 +4,9 @@ from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 from matplotlib.figure import Figure
 from io import BytesIO
 from base64 import b64decode
+from matplotlib import style
+
+style.use("fivethirtyeight")
 
 app = Flask(__name__)
 
