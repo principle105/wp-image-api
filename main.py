@@ -20,6 +20,7 @@ def create_figure(data):
         axis.plot(x, data["y_values"][y], label=y)
 
     fig.legend()
+    fig.title(data["title"])
     fig.subplots_adjust(bottom=data["adjust"])
 
     return fig
