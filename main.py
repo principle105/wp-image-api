@@ -8,7 +8,7 @@ from base64 import b64decode
 app = Flask(__name__)
 
 def create_figure(data):
-    fig = Figure(figsize=tuple(data["figsize"]))
+    fig = Figure(figsize=data["figsize"])
 
     axis = fig.add_subplot(1, 1, 1)
 
