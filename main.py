@@ -23,10 +23,13 @@ def create_figure(data):
 
 @app.route("/")
 def serve_img():
+    raw_data = request.args.get("data")
+    if raw_data is None:
+      return {"error": "no data"}
 
-    raw_data = b64decode(request.args.get("data").encode()).decode()
+    decoded_data = b64decode(raw_data.encode()).decode()
 
-    data = json.loads(raw_data)
+    data = json.loads(decoded_data)
 
     fig = create_figure(data)
 
