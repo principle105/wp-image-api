@@ -23,13 +23,13 @@ for param in ["figure.facecolor", "axes.facecolor", "savefig.facecolor"]:
 for param in ["text.color", "axes.labelcolor", "xtick.color", "ytick.color"]:
     rcParams[param] = "0.9"
 
-rcParams.update({'axes.titlesize': 22})
+rcParams.update({"axes.titlesize": 22})
 
 rcParams["lines.linewidth"] = 2
 
 app = Flask(__name__)
 
-COLOURS = ["#08F7FE", "#FE53BB", "#F5D300", "#00ff41"]
+COLOURS = ["#00BBA8", "#FF5F00", "#F5D300"]
 
 
 def create_figure(data):
